@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+
+#about {
+  margin-top: 16rem;
+}
+h1 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 3rem;
+}
+p {
+  color: rgb(165, 171, 171);
+  font-size: 2rem;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+#img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#img img {
+  width: 50%;
+  border-radius: 50%;
+}
+#github {
+  width: 48px;
+}
+#linkedin {
+  width: 48px;
+}
+#gmail {
+  width: 48px;
+}
+#facebook {
+  width: 48px;
+}
+#social {
+  display: flex;
+
+  justify-content: center;
+}
+#skills {
+  margin-top: 5rem;
+}
+#skills h1 {
+  text-align: center;
+}
+#icons {
+  display: flex;
+  flex-direction: column;
+}
+#skill-img {
+  width: 100%;
+}
+.skill {
+  width: 100px;
+}
+.star {
+  width: 38px;
+}
+#courses {
+  margin-top: 5rem;
+}

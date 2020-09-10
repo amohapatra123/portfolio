@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Kaushan+Script&display=swap");
+
+.navbar-brand {
+  font-family: "Bree Serif", serif;
+  font-size: 50px;
+}
+.navbar-toggler {
+  color: rgba(0, 0, 0, 0);
+  border-color: hsla(0, 0%, 100%, 0.1);
+}
+.nav-item h4 {
+  padding: 0.1rem;
+  font-weight: lighter;
+  color: #8a25b1;
+  font-family: "Kaushan Script", cursive;
+}
+img {
+  width: 100px;
+}
