@@ -98,3 +98,13 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+#contact {
+  margin-top: 5rem;
+  padding: 0.5rem;
+}
+#contact h1 {
+  text-align: center;
+}
+#send {
+  background-color: blueviolet;
+}

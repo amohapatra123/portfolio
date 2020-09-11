@@ -2,7 +2,7 @@ const http = require("http");
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-
+const cors = require("cors");
 mongoose
   .connect(process.env.MONGODB_URI || "mongodb://localhost:27017/portfolio", {
     useNewUrlParser: true,
@@ -14,7 +14,7 @@ mongoose
 const contact = require("./routes/contact");
 
 const app = express();
-
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 

@@ -10,11 +10,44 @@ import {
   CardBody,
   Button,
   CardLink,
+  FormGroup,
+  Label,
+  Input,
 } from "reactstrap";
 import { Course, Specialisation } from "../utils/course";
-import { Projects } from "../utils/projects";
+import axios from "axios";
 export default class Main extends Component {
+  state = {
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  };
+  handleChange = (e) => {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value,
+    });
+  };
+  handleClick = () => {
+    const { name, email, phone, message } = this.state;
+    const request = {
+      name,
+      email,
+      phone,
+      message,
+    };
+    axios
+      .post("http://anshuman-mohapatra.herokuapp.com/api/contact", { request })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   render() {
+    const { name, email, phone, message } = this.state;
     return (
       <div>
         <Container fluid={true}>
@@ -383,6 +416,59 @@ export default class Main extends Component {
                   />
                 </a>
               </span>
+            </Col>
+          </Row>
+        </Container>
+        <Container id="contact">
+          <h1>Contact Me</h1>
+          <Row>
+            <Col md={{ size: 8, offset: 2 }} xs={{ size: 12 }}>
+              <FormGroup>
+                <Label for="name">Name</Label>
+                <Input
+                  type="text"
+                  name="name"
+                  value={name}
+                  id="name"
+                  placeholder="Name"
+                  onChange={this.handleChange}
+                />
+              </FormGroup>
+              <FormGroup>
+                <Label for="Email">Email</Label>
+                <Input
+                  type="email"
+                  name="email"
+                  value={email}
+                  id="Email"
+                  placeholder="Email"
+                  onChange={this.handleChange}
+                />
+              </FormGroup>
+              <FormGroup>
+                <Label for="phone">Contact</Label>
+                <Input
+                  type="text"
+                  name="phone"
+                  value={phone}
+                  id="phone"
+                  placeholder="Contact Number"
+                  onChange={this.handleChange}
+                />
+              </FormGroup>
+              <FormGroup>
+                <Label for="message">Message</Label>
+                <Input
+                  type="textarea"
+                  name="message"
+                  value={message}
+                  id="message"
+                  onChange={this.handleChange}
+                />
+              </FormGroup>
+              <Button color="primary" id="send" onClick={this.handleClick}>
+                Send Message
+              </Button>
             </Col>
           </Row>
         </Container>
