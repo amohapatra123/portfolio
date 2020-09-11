@@ -4,13 +4,6 @@ const nodemailer = require("nodemailer");
 const Contact = require("../models/contact");
 router.post("/contact", (req, res) => {
   const { name, email, phone, message } = req.body.request;
-  const newContact = new Contact({
-    name,
-    email,
-    phone,
-    message,
-  });
-  newContact.save();
 
   var transporter = nodemailer.createTransport({
     service: "gmail",
@@ -37,5 +30,12 @@ router.post("/contact", (req, res) => {
       res.send("Message sent sucessfully!!!");
     }
   });
+  const newContact = new Contact({
+    name,
+    email,
+    phone,
+    message,
+  });
+  newContact.save();
 });
 module.exports = router;
