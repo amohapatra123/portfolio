@@ -40,18 +40,22 @@ export default class Main extends Component {
       phone,
       message,
     };
-    axios
-      .post("http://localhost:5000/api/contact", { request })
-      .then((res) => {
-        console.log(res);
-        this.setState({
-          data: res.data,
-          msg: parseInt(this.state.msg) + parseInt(1),
+    name &&
+      email &&
+      phone &&
+      message &&
+      axios
+        .post("http://localhost:5000/api/contact", { request })
+        .then((res) => {
+          console.log(res);
+          this.setState({
+            data: res.data,
+            msg: parseInt(this.state.msg) + parseInt(1),
+          });
+        })
+        .catch((err) => {
+          console.log(err);
         });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
   };
   render() {
     const { name, email, phone, message, msg } = this.state;
@@ -492,10 +496,10 @@ export default class Main extends Component {
             </Col>
           </Row>
         </Container>
-        <div>
+        {/* <div>
           <strong>Total messages:</strong>
           {msg}
-        </div>
+        </div> */}
       </div>
     );
   }
