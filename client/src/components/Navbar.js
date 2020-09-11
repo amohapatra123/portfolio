@@ -60,15 +60,15 @@ export default function Navbar() {
                       <h4>Projects</h4>
                     </a>
                   </li>
+
                   <li className="nav-item">
-                    <Link className="nav-link" to="/" onClick={toggleMenu}>
-                      <h4>Resume</h4>
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/" onClick={toggleMenu}>
+                    <a
+                      className="nav-link"
+                      href="#contact"
+                      onClick={toggleMenu}
+                    >
                       <h4>Contact</h4>
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </div>
