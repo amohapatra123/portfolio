@@ -8,7 +8,11 @@ h1 {
   font-family: "Kaushan Script", cursive;
   font-size: 3rem;
 }
-p {
+h2 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2rem;
+}
+#about p {
   color: rgb(165, 171, 171);
   font-size: 2rem;
   font-family: "Open Sans Condensed", sans-serif;
@@ -60,4 +64,37 @@ p {
 }
 #courses {
   margin-top: 5rem;
+}
+#courses h1 {
+  text-align: center;
+}
+#card {
+  margin: 1rem;
+  min-height: 500px;
+  max-height: 500px;
+  padding: 0.5rem;
+}
+#course-img {
+  height: 200px;
+}
+#c-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#projects {
+  margin-top: 5rem;
+}
+#projects h1 {
+  text-align: center;
+}
+#p-row {
+  background-color: black;
+  padding: 2rem;
+  margin: 1rem;
+}
+.p-span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

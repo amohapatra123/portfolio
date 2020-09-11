@@ -1,7 +1,18 @@
 import React, { Component } from "react";
 import "../styles/main.css";
 import Navbar from "../components/Navbar";
-import { Container, Row, Col } from "reactstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  CardImg,
+  CardBody,
+  Button,
+  CardLink,
+} from "reactstrap";
+import { Course, Specialisation } from "../utils/course";
+import { Projects } from "../utils/projects";
 export default class Main extends Component {
   render() {
     return (
@@ -67,6 +78,7 @@ export default class Main extends Component {
           </Row>
         </Container>
         <Container fluid={true} id="skills">
+          <h1>Skills I a'm Proud of</h1>
           <Row>
             <Col md={{ size: 6, order: 1 }} xs={{ size: 12, order: 2 }}>
               <img
@@ -76,20 +88,39 @@ export default class Main extends Component {
               />
             </Col>
             <Col md={{ size: 6, order: 2 }} xs={{ size: 12, order: 1 }}>
-              <h1>Skills I a'm Proud of</h1>
               <Row>
-                <Col id="icons">
+                <Col md={{ size: 6 }} xs={{ size: 12 }} id="icons">
                   <span>
                     <img
                       src={require("../assets/html.svg")}
                       alt="html"
                       class="skill"
                     />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
                   </span>
                   <span>
                     <img
@@ -97,10 +128,26 @@ export default class Main extends Component {
                       alt="css"
                       class="skill"
                     />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
                   </span>
                   <span>
                     <img
@@ -108,10 +155,26 @@ export default class Main extends Component {
                       alt="js"
                       class="skill"
                     />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
                   </span>
                   <span>
                     <img
@@ -119,23 +182,55 @@ export default class Main extends Component {
                       alt="bootstrap"
                       class="skill"
                     />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
                   </span>
                 </Col>
-                <Col id="icons">
+                <Col md={{ size: 6 }} xs={{ size: 12 }} id="icons">
                   <span>
                     <img
                       src={require("../assets/react.svg")}
                       alt="bootstrap"
                       class="skill"
                     />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
                   </span>
                   <span>
                     <img
@@ -143,8 +238,16 @@ export default class Main extends Component {
                       alt="php"
                       class="skill"
                     />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
                   </span>
                   <span>
                     <img
@@ -152,7 +255,11 @@ export default class Main extends Component {
                       alt="nodejs"
                       class="skill"
                     />
-                    <img src={require("../assets/star.png")} class="star" />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
                   </span>
                   <span>
                     <img
@@ -160,9 +267,21 @@ export default class Main extends Component {
                       alt="git"
                       class="skill"
                     />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
-                    <img src={require("../assets/star.png")} class="star" />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
+                    <img
+                      src={require("../assets/star.png")}
+                      alt=""
+                      class="star"
+                    />
                   </span>
                 </Col>
               </Row>
@@ -170,11 +289,101 @@ export default class Main extends Component {
           </Row>
         </Container>
         <Container fluid={true} id="courses">
+          <h1>Courses that have helped me a lot</h1>
+          <h2>Specializations:</h2>
           <Row>
-            <Col>
-              <h1>Courses that have helped me a lot</h1>
+            <Col md={{ size: 3 }} xs={{ size: 12 }} key={Specialisation.id}>
+              <Card id="card">
+                <CardImg
+                  src={require("../assets/coursera.jfif")}
+                  alt=""
+                  id="course-img"
+                />
+                <CardBody id="c-body">
+                  <h5>{Specialisation.name}</h5>
+                  <p>{Specialisation.by}</p>
+
+                  <CardLink href={Specialisation.link}>
+                    <Button color="light" block>
+                      View Certificate
+                    </Button>
+                  </CardLink>
+                </CardBody>
+              </Card>
             </Col>
-            <Col></Col>
+          </Row>
+          <h2>Courses:</h2>
+          <Row>
+            {Course.map((item) => {
+              return (
+                <>
+                  <Col md={{ size: 3 }} xs={{ size: 12 }} key={item.id}>
+                    <Card id="card">
+                      <CardImg
+                        src={require("../assets/coursera.jfif")}
+                        alt=""
+                        id="course-img"
+                      />
+                      <CardBody id="c-body">
+                        <h5>{item.name}</h5>
+                        <p>{item.by}</p>
+                        <span>
+                          <strong>GRADE</strong>:{`${item.grade}%`}
+                        </span>
+                        <br />
+                        <CardLink href={item.link}>
+                          <Button color="light" block>
+                            View Certificate
+                          </Button>
+                        </CardLink>
+                      </CardBody>
+                    </Card>
+                  </Col>
+                </>
+              );
+            })}
+          </Row>
+        </Container>
+        <Container fluid={true} id="projects">
+          <h1>Some Projects I have done</h1>
+          <Row id="p-row">
+            <Col md={{ size: 3 }} xs={{ size: 12 }} class="p-col">
+              <span class="p-span">
+                <a href="https://firsttome.in/">
+                  <img src={require("../assets/p1.png")} alt="" />
+                </a>
+              </span>
+            </Col>
+            <Col md={{ size: 3 }} xs={{ size: 12 }} class="p-col">
+              <span class="p-span">
+                <a href="https://bustorwin.com/">
+                  <img
+                    src={require("../assets/p2.png")}
+                    alt=""
+                    className="mt-5"
+                    width="50%"
+                  />
+                </a>
+              </span>
+            </Col>
+            <Col md={{ size: 3 }} xs={{ size: 12 }} class="p-col">
+              <span class="p-span">
+                <a href="https://docvideoappp.000webhostapp.com">
+                  <img src={require("../assets/p3.png")} alt="" width="50%" />
+                </a>
+              </span>
+            </Col>
+            <Col md={{ size: 3 }} xs={{ size: 12 }} class="p-col">
+              <span class="p-span">
+                <a href="https://tecguru.in/">
+                  <img
+                    src={require("../assets/p4.jpeg")}
+                    alt=""
+                    className="mt-3"
+                  />
+                </a>
+              </span>
+            </Col>
           </Row>
         </Container>
       </div>

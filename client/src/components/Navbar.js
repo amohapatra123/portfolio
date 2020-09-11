@@ -33,32 +33,40 @@ export default function Navbar() {
               <div className={"collapse navbar-collapse " + show}>
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
-                    <a className="nav-link" href="#about">
+                    <a className="nav-link" href="#about" onClick={toggleMenu}>
                       <h4>About</h4>
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#skills">
+                    <a className="nav-link" href="#skills" onClick={toggleMenu}>
                       <h4>Skills</h4>
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#courses">
+                    <a
+                      className="nav-link"
+                      href="#courses"
+                      onClick={toggleMenu}
+                    >
                       <h4>Courses</h4>
                     </a>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/">
+                    <a
+                      className="nav-link"
+                      href="#projects"
+                      onClick={toggleMenu}
+                    >
                       <h4>Projects</h4>
-                    </Link>
+                    </a>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/">
+                    <Link className="nav-link" to="/" onClick={toggleMenu}>
                       <h4>Resume</h4>
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/">
+                    <Link className="nav-link" to="/" onClick={toggleMenu}>
                       <h4>Contact</h4>
                     </Link>
                   </li>
