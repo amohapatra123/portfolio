@@ -65,7 +65,15 @@ export default class Main extends Component {
                 A passionate Web Developer. Likes to work on User Experience &
                 User Interface hence more off a Front-End Developer. Having
                 experience in making Web applications using Javascript/React js
-                and some libraries like Bootstrap.
+                and some libraries like Bootstrap.<br></br>
+                <Button color="primary" id="resume">
+                  <a
+                    href="https://docs.google.com/document/d/1JpllA4ad-WIhZwl28ZF-I1riiPoXSpRqQrIXke2oVjA/edit?usp=sharing"
+                    class="link"
+                  >
+                    My Resume
+                  </a>
+                </Button>
               </p>
             </Col>
             <Col md={{ size: 6 }} xs={{ size: 12 }}>
