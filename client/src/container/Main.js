@@ -23,6 +23,8 @@ export default class Main extends Component {
     email: "",
     phone: "",
     message: "",
+    data: "",
+    msg: 0,
   };
   handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,26 +33,28 @@ export default class Main extends Component {
     });
   };
   handleClick = () => {
-    const { name, email, phone, message } = this.state;
+    const { name, email, phone, message, data, msg } = this.state;
     const request = {
       name,
       email,
       phone,
       message,
-      data: "",
     };
     axios
-      .post("http://anshuman-mohapatra.herokuapp.com/api/contact", { request })
+      .post("http://localhost:5000/api/contact", { request })
       .then((res) => {
         console.log(res);
-        this.setState({ data: res.data });
+        this.setState({
+          data: res.data,
+          msg: parseInt(this.state.msg) + parseInt(1),
+        });
       })
       .catch((err) => {
         console.log(err);
       });
   };
   render() {
-    const { name, email, phone, message } = this.state;
+    const { name, email, phone, message, msg } = this.state;
     return (
       <div>
         <Container fluid={true}>
@@ -488,6 +492,10 @@ export default class Main extends Component {
             </Col>
           </Row>
         </Container>
+        <div>
+          <strong>Total messages:</strong>
+          {msg}
+        </div>
       </div>
     );
   }
