@@ -13,6 +13,7 @@ import {
   FormGroup,
   Label,
   Input,
+  UncontrolledAlert,
 } from "reactstrap";
 import { Course, Specialisation } from "../utils/course";
 import axios from "axios";
@@ -36,11 +37,13 @@ export default class Main extends Component {
       email,
       phone,
       message,
+      data: "",
     };
     axios
       .post("http://anshuman-mohapatra.herokuapp.com/api/contact", { request })
       .then((res) => {
         console.log(res);
+        this.setState({ data: res.data });
       })
       .catch((err) => {
         console.log(err);
@@ -423,6 +426,11 @@ export default class Main extends Component {
           <h1>Contact Me</h1>
           <Row>
             <Col md={{ size: 8, offset: 2 }} xs={{ size: 12 }}>
+              {this.state.data ? (
+                <>
+                  <UncontrolledAlert>{this.state.data}</UncontrolledAlert>
+                </>
+              ) : null}
               <FormGroup>
                 <Label for="name">Name</Label>
                 <Input
