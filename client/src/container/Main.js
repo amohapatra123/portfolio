@@ -13,7 +13,6 @@ import {
   FormGroup,
   Label,
   Input,
-  UncontrolledAlert,
 } from "reactstrap";
 import { Course, Specialisation } from "../utils/course";
 import axios from "axios";
@@ -23,7 +22,6 @@ export default class Main extends Component {
     email: "",
     phone: "",
     message: "",
-    data: "",
   };
   handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,7 +30,7 @@ export default class Main extends Component {
     });
   };
   handleClick = () => {
-    const { name, email, phone, message, data } = this.state;
+    const { name, email, phone, message } = this.state;
     const request = {
       name,
       email,
@@ -42,7 +40,7 @@ export default class Main extends Component {
     axios
       .post("http://anshuman-mohapatra.herokuapp.com/api/contact", { request })
       .then((res) => {
-        this.setState({ data: res.data });
+        console.log(res);
       })
       .catch((err) => {
         console.log(err);
@@ -64,15 +62,7 @@ export default class Main extends Component {
                 A passionate Web Developer. Likes to work on User Experience &
                 User Interface hence more off a Front-End Developer. Having
                 experience in making Web applications using Javascript/React js
-                and some libraries like Bootstrap.<br></br>
-                <Button color="primary" id="resume">
-                  <CardLink
-                    href="https://docs.google.com/document/d/1JpllA4ad-WIhZwl28ZF-I1riiPoXSpRqQrIXke2oVjA/edit?usp=sharing"
-                    id="resume-text"
-                  >
-                    My Resume
-                  </CardLink>
-                </Button>
+                and some libraries like Bootstrap.
               </p>
             </Col>
             <Col md={{ size: 6 }} xs={{ size: 12 }}>
@@ -431,14 +421,8 @@ export default class Main extends Component {
         </Container>
         <Container id="contact">
           <h1>Contact Me</h1>
-
           <Row>
             <Col md={{ size: 8, offset: 2 }} xs={{ size: 12 }}>
-              {this.state.data ? (
-                <>
-                  <UncontrolledAlert>{this.state.data}</UncontrolledAlert>
-                </>
-              ) : null}
               <FormGroup>
                 <Label for="name">Name</Label>
                 <Input
