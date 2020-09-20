@@ -17,6 +17,7 @@ import {
 } from "reactstrap";
 import { Course, Specialisation } from "../utils/course";
 import axios from "axios";
+
 export default class Main extends Component {
   state = {
     name: "",
@@ -45,7 +46,9 @@ export default class Main extends Component {
       phone &&
       message &&
       axios
-        .post("http://localhost:5000/api/contact", { request })
+        .post("https://anshuman-mohapatra.herokuapp.com/api/contact", {
+          request,
+        })
         .then((res) => {
           console.log(res);
           this.setState({
